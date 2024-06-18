@@ -41,3 +41,13 @@ export function getComments(article_id) {
         console.log(err)
     })
 }
+
+export function updateArticleVotes(article_id, votes) {
+    return axios.patch(`https://be-nc-news-q0tg.onrender.com/api/articles/${article_id}`, {inc_votes: votes})
+    .then((response) => {
+        console.log(response)
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+}
