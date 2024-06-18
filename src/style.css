@@ -41,18 +41,6 @@ ul {
     justify-items: center;
 }
 
-li {
-    list-style-type: none;
-    border: 2px solid rgb(159, 154, 154);
-    padding: 20px;
-    margin: 0;
-    max-width: 300px;
-    box-sizing: border-box;
-    color: black;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-}
-
 img {
     max-width: 100%;
     height: auto;
@@ -75,13 +63,21 @@ a {
     text-decoration: none;
 }
 
-li:hover {
+.article-card:hover {
     cursor: pointer;
     background-color: rgba(201, 201, 201, 0.2)
 }
 
 .article-card {
     text-decoration: none;
+    list-style-type: none;
+    border: 2px solid rgb(159, 154, 154);
+    padding: 20px;
+    margin: 0;
+    max-width: 300px;
+    box-sizing: border-box;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .article-container {
@@ -101,7 +97,44 @@ li:hover {
     height: auto;
     margin: 20px 0;
 }
-p {
+.article-body {
     margin: 40px 30px;
     line-height: 2;
+}
+
+button {
+    font-size:medium;
+    width: 50px;
+}
+
+.comments-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.comments-container ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment {
+    list-style-type: none;
+    border: 2px solid rgb(159, 154, 154);
+    padding: 20px;
+    margin: 0 0 20px 0; /* Add margin bottom to separate comments */
+    width: 100%; /* Ensure it takes full width */
+    box-sizing: border-box;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+button:hover {
+    cursor: pointer;
 }
