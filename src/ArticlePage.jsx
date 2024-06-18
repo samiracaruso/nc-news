@@ -4,7 +4,9 @@ import { getArticleById } from "./api";
 import { format } from "date-fns";
 
 function ArticlePage() {
+  console.log(useParams(), '<--- useParams')
   const { article_id } = useParams();
+ 
   const [article, setArticle] = useState('');
 
   useEffect(() => {
