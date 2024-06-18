@@ -5,7 +5,7 @@ function ArticleCard({ article }) {
  
   return (
     <Link to={`/articles/${article.article_id}`} className="article-card">
-      <li>
+      <li >
         <h3>{article.title}</h3>
         <h4>Author: {article.author}</h4>
         <h5>{format(new Date(article.created_at), "dd MMMM yyyy H:mm")}</h5>

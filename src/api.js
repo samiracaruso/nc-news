@@ -24,7 +24,17 @@ export function getArticles() {
 export function getArticleById(article_id) {
     return axios.get(`https://be-nc-news-q0tg.onrender.com/api/articles/${article_id}`)
     .then((response) => {
-        console.log(response)
+        return response.data
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+}
+
+export function getComments(article_id) {
+    return axios
+    .get(`https://be-nc-news-q0tg.onrender.com/api/articles/${article_id}/comments`)
+    .then((response) => {
         return response.data
     })
     .catch((err) => {
