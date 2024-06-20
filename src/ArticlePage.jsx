@@ -6,6 +6,7 @@ import Comments from "./Comments";
 import ArticleVotes from "./ArticleVotes";
 
 function ArticlePage() {
+
   const { article_id } = useParams();
  
   const [article, setArticle] = useState('');

@@ -51,3 +51,25 @@ export function updateArticleVotes(article_id, votes) {
         console.log(err)
     })
 }
+
+export function postComment(article_id, commentData) {
+    return axios
+    .post(`https://be-nc-news-q0tg.onrender.com/api/articles/${article_id}/comments`, commentData)
+    .then((response) => {
+        console.log(response)
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+}
+
+export function deleteComment(comment_id) {
+    return axios
+    .delete(`https://be-nc-news-q0tg.onrender.com/api/articles/comments/${comment_id}`)
+    .then((reponse) => {
+        console.log(response)
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+}

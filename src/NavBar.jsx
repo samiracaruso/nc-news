@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 function NavBar() {
+
     const [navBar, setNavBar] = useState([])
 
     useEffect(() => {

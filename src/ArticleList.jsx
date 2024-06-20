@@ -4,6 +4,7 @@ import { getArticles } from "./api"
 import ArticleCard from "./ArticleCard"
 
 function ArticleList() {
+
     const [articles, setArticles] = useState([])
 
     useEffect(() => {
@@ -12,6 +13,8 @@ function ArticleList() {
             setArticles(data.articles)
         })
     }, [])
+
+    if (articles.length === 0) return <p>Loading...</p>
 
     return(
         <>

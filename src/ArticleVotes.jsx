@@ -2,6 +2,7 @@ import { useState } from "react";
 import { updateArticleVotes } from "./api";
 
 function ArticleVotes({article}) {
+
   const [votes, setVotes] = useState(article.votes);
 
   const {article_id} = article

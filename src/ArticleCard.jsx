@@ -2,6 +2,7 @@ import { format } from "date-fns";
 import { Link } from "react-router-dom";
 
 function ArticleCard({ article }) {
+
  
   return (
     <Link to={`/articles/${article.article_id}`} className="article-card">
@@ -12,7 +13,7 @@ function ArticleCard({ article }) {
         <h5>Category: {article.topic}</h5>
         <img src={article.article_img_url} />
         <h5>Comments: {article.comment_count}</h5>
-        <h5>Votes: {article.votes}</h5>
+        <h5>Likes: {article.votes}</h5>
       </li>
     </Link>
   );

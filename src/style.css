@@ -131,10 +131,64 @@ button {
     box-sizing: border-box;
     color: black;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center children horizontally */
 }
 
-
+.button-group {
+    display: flex;
+    gap: 10px; /* Add some space between the buttons */
+    margin-top: 10px; /* Add margin top to separate from the likes count */
+}
 
 button:hover {
     cursor: pointer;
 }
+
+.responsive-textarea {
+    width: 100%; 
+    max-width: 100%; 
+    min-height: 100px; 
+    max-height: 50vh; 
+    box-sizing: border-box; 
+    padding: 10px; 
+    font-size: 1em; 
+    resize: vertical; 
+    margin-bottom: 25px;
+}
+
+
+.post-comment {
+    width: 100px;
+}
+
+.logged-in {
+    text-align: left;
+}
+
+.delete-comment {
+    margin-top: 25px;
+    width: 150px;
+    display: block;
+}
+
+.delete-comment:hover {
+    background-color: rgba(248, 194, 0, 0.6);
+    border-radius: 5px;
+}
+
+/* Confirmation Popup styles */
+.confirmation-popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50; /* Green background */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0.9; /* Slightly transparent */
+  }
+  
