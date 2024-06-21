@@ -11,8 +11,8 @@ export function getTopics() {
     })
 }
 
-export function getArticles() {
-    return axios.get(`https://be-nc-news-q0tg.onrender.com/api/articles/`)
+export function getArticles(article_topic) {
+    return axios.get(`https://be-nc-news-q0tg.onrender.com/api/articles/`, {params: {topic: article_topic}})
     .then((response) => {
         return response.data
     })

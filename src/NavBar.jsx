@@ -1,27 +1,26 @@
-import {useState} from 'react'
-import { getTopics } from './api'
-import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react';
+import { getTopics } from './api';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
-
-    const [navBar, setNavBar] = useState([])
+    const [navBar, setNavBar] = useState([]);
 
     useEffect(() => {
-        getTopics()
-        .then((data) => {
-            setNavBar(data.topics)
-        })
-    }, [])
+        getTopics().then((data) => {
+            setNavBar(data.topics);
+        });
+    }, []);
 
-    return(
+    return (
         <nav>
-            <Link to="/"className="nav-link">Home</Link>
-            {navBar.map((topic) => {
-                return <a key={topic.slug}>{topic.slug.slice(0,1).toUpperCase() + topic.slug.slice(1)} </a>
-            })}
+            <Link to="/" className="nav-link">Home</Link>
+            {navBar.length > 0 && navBar.map((topic) => (
+                <Link key={topic.slug} to={`/articles/${topic.slug}`} className="nav-link">
+                    {topic.slug.charAt(0).toUpperCase() + topic.slug.slice(1)}
+                </Link>
+            ))}
         </nav>
-    )
+    );
 }
 
-export default NavBar
+export default NavBar;
